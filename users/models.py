@@ -1,3 +1,13 @@
 from django.db import models
 
-# Create your models here.
+# Model Hierarchy
+# Users
+#     |_Enrolled Courses
+
+
+class Student(models.Model):
+    pass
+
+
+class Enroll(models.Model):
+    pass
