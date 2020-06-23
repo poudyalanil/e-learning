@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 
 # Model Hierarchy
 
@@ -12,7 +13,12 @@ from django.db import models
 
 
 class Module(models.Model):
-    pass
+    title = models.CharField(max_length=50)
+    author = models.CharField(max_length=20)
+    last_update = datetime.now()
+
+    def __str__(self):
+        return (self.title, self.author, self.last_update)
 
 
 class Unit(models.Model):
