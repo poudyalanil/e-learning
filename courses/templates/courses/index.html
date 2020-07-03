@@ -1,0 +1,22 @@
+{%extends 'courses/base.html'%}
+
+{%block content%}
+<div class="container">
+
+    {%for course in courses%}
+    <div class="card" style="width: 18rem; margin: 5vh;">
+        <div class="card-body">
+            <h5 class="card-title">{{course.title}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{course.last_update}}</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+            <a href="courses/{{course.id}}" class="card-link">
+                <button type="button" class="btn btn-primary">Enroll for Free!!</button>
+
+            </a>
+
+        </div>
+    </div>
+    {%endfor%}
+</div>
+{%endblock%}
