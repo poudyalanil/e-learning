@@ -50,6 +50,7 @@ class Module(models.Model):
     today = date.today()
     last_update = today.strftime('%d/%m/%Y')
     units = models.ManyToManyField(Unit)
+    module_description = models.TextField(default='No Description Provided')
 
     def __str__(self):
         return self.title
