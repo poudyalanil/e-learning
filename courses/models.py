@@ -43,6 +43,8 @@ class Unit(models.Model):
 
     lessons = models.ForeignKey(Lesson, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.unit_title
 
 class Module(models.Model):
     title = models.CharField(max_length=50)

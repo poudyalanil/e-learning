@@ -1,1 +1,29 @@
 {%extends 'courses/base.html'%}
+{%block content%}
+<div class="container" style="background-color: azure; box-shadow: grey; padding: 25px;">
+<h2>{{course.title}}</h2>
+<span>{{course.author}}</span>
+&nbsp;
+<span>{{course.last_update}}</span>
+<br>
+
+<span>{{course.module_description}}</span>
+
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+      Units
+    </div>
+    <ul class="list-group list-group-flush">
+        {%for unit in course.units.all%}
+      <li class="list-group-item">{{unit.unit_title}}
+          <br>
+
+        <span>{{unit.unit_description}}</span>
+
+      </li>
+      {%endfor%}
+    </ul>
+  </div>
+
+</div>
+{%endblock%}
